@@ -17,7 +17,7 @@
 
 Painel de usuário e administração para utilização em uma clínica médica.
 
-## ✨ Recursos:
+## ✨ Novidades:
 
 - [x] Configuração do container Docker.
 - [x] Configuração do ambiente de trabalho.
