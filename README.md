@@ -17,7 +17,7 @@
 
 Projeto de uma página de clínica médica, com painel de usuário e administração.
 
-## ✨ Recursos:
+## ✨ Novidades:
 
 - [x] Configuração do container Docker.
 - [x] Configuração do ambiente de trabalho.
