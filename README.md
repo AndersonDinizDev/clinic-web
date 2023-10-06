@@ -15,7 +15,7 @@
 
 ## Descrição:
 
-Projeto de uma página de clínica médica, com painel de usuário e administração.
+Painel de usuário e administração para utilização em uma clínica médica.
 
 ## ✨ Recursos:
 
