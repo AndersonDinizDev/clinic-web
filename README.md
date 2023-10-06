@@ -1,51 +1,51 @@
 # Clinic-Web
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/andersondinizdev/clinic-web?style=for-the-badge">
+  <img alt="Linguagem principal do GitHub" src="https://img.shields.io/github/languages/top/andersondinizdev/clinic-web?style=for-the-badge">
   
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/andersondinizdev/clinic-web?style=for-the-badge">
+  <img alt="Contagem de linguagens do GitHub" src="https://img.shields.io/github/languages/count/andersondinizdev/clinic-web?style=for-the-badge">
   
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/andersondinizdev/clinic-web?style=for-the-badge">
+  <img alt="Tamanho do repositório do GitHub" src="https://img.shields.io/github/repo-size/andersondinizdev/clinic-web?style=for-the-badge">
 
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/andersondinizdev/clinic-web?style=for-the-badge">
+  <img alt="Forks do GitHub" src="https://img.shields.io/github/forks/andersondinizdev/clinic-web?style=for-the-badge">
     
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/andersondinizdev/clinic-web?style=for-the-badge"/> 
+  <img alt="Estrelas do GitHub" src="https://img.shields.io/github/stars/andersondinizdev/clinic-web?style=for-the-badge"/>
 
 </p>
 
-## Description:
+## Descrição:
 
-Project for a medical clinic webpage with user and admin panels.
+Projeto de uma página de clínica médica, com painel de usuário e administração.
 
-## ✨ Features:
-- [x] Configuration of the Docker container.;
-- [x] Workspace setup/configuration.;
+## ✨ Recursos:
 
-## 💻 Requeriments:
+- [x] Configuração do container Docker.
+- [x] Configuração do ambiente de trabalho.
 
-Before starting :checkered_flag:, you need to have [Docker](https://docs.docker.com/).
-"Some additional project requirements will be provided when opening the 'clinic-web.code-workspace' file."
+## 💻 Requisitos:
 
-## 🚀 Technologies:
+Antes de começar :checkered_flag:, você precisa ter o [Docker](https://docs.docker.com/) instalado para a criação dos containers. <br/><br/>
+"Alguns outros requisitos do projeto serão informados ao abrir o arquivo "clinic-web.code-workspace".
 
-The following tools were used in this project:
+## 🚀 Tecnologias:
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)  
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) 
+As seguintes ferramentas foram utilizadas neste projeto:
+
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [PHP](https://www.php.net/docs.php)
 - [MYSQL](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Início
 
 ```bash
-# Clone this project
+# Clone este projeto
 $ git clone https://github.com/andersondinizdev/clinic-web.git
-# Access
+# Acesse
 $ cd clinic-web
-# open the terminal and type
+# Abra o terminal e digite
 $ docker-compose up -d
-# The server will initialize in the <http://localhost:3001/>
+# O servidor será inicializado em <http://localhost:3001/>
 ```
+
 [⬆ Voltar ao topo](#Clinic-Web)<br>
