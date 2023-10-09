@@ -27,6 +27,12 @@
   border-radius: 8px;
   border: 1.5px solid #abc9ed;
   outline: none;
+  transition: all 0.7s ease;
+}
+
+.form-group > input:hover,
+.form-group > input:focus {
+  box-shadow: 0 0 5px #3786e5;
 }
 
 .form-group > input::placeholder {

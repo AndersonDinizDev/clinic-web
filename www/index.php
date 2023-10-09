@@ -17,15 +17,27 @@
 </head>
 
 <body>
+  <div id="loading" style="position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: 100000;">
+    <div style="display: flex; margin: 0 auto;">
+      <div class="spinner-border" style="width: 3rem; height: 3rem;"></div>
+    </div>
+  </div>
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
         <h1 class="texts-color-white texts-type-1 d-flex align-items-center gap-3"><img src="assets/logo.svg" alt="logo-img" />Clinic Web</h1>
-        <form class="container login-area">
+        <form class="container login-area" method="post" action="#">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <h2 class="text-center texts-type-2 texts-color-blue">Entre com suas Informações:</h2>
             <div class="form-group">
-              <input class="texts-type-3 texts-color-blue p-3" name="email" type="email" id="email" placeholder="E-mail" />
+              <input class="texts-type-3 texts-color-blue p-3" name="email" type="email" id="email" placeholder="E-mail" autofocus />
             </div>
             <div class="form-group">
               <input class="texts-type-3 texts-color-blue p-3" name="password" type="password" id="password" placeholder="Senha" />
@@ -34,7 +46,7 @@
               <input type="checkbox" id="save-account">
               <label for="save-account" class="texts-type-4 texts-color-gray">Lembrar minha conta</label>
             </div>
-            <button class="btn btn-primary button-color-blue">Login</button>
+            <button class="btn btn-primary button-color-blue texts-type-5">Login</button>
           </div>
         </form>
         <footer class="login-footer mt-3">
@@ -44,6 +56,12 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    window.onload = function() {
+      $('#loading').fadeOut(1000);
+    };
+  </script>
 </body>
 
 </html>
