@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/texts-color.css">
   <link rel="stylesheet" href="styles/texts-types.css">
   <link rel="stylesheet" href="styles/button-color.css">
+  <link rel="stylesheet" href="styles/styles-login-responsive.css">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +19,9 @@
 <body>
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
-      <div class="login-container d-flex justify-content-center align-items-center flex-column">
+      <div class="container login-container d-flex justify-content-center align-items-center flex-column">
         <h1 class="texts-color-white texts-type-1 d-flex align-items-center gap-3"><img src="assets/logo.svg" alt="logo-img" />Clinic Web</h1>
-        <form class="login-area">
+        <form class="container login-area">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <h2 class="text-center texts-type-2 texts-color-blue">Entre com suas Informações:</h2>
             <div class="form-group">
@@ -36,7 +37,7 @@
             <button class="btn btn-primary button-color-blue">Login</button>
           </div>
         </form>
-        <footer class="login-footer">
+        <footer class="login-footer mt-3">
           <p class="texts-type-4 texts-color-gray">© Clinic Web <?= date("Y") ?></p>
         </footer>
       </div>

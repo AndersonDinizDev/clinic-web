@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container-fluid {
   background: linear-gradient(to bottom, #3786e5 50%, #f4f9ff 50%);
   min-height: 100vh;
@@ -16,7 +22,7 @@
 }
 
 .form-group > input {
-  width: 417px;
+  width: 390px; /* Defina um valor máximo para evitar que os campos fiquem muito largos */
   height: 56px;
   border-radius: 8px;
   border: 1.5px solid #abc9ed;
