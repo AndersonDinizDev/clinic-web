@@ -14,6 +14,8 @@ if (!empty($parts[0])) {
 $page_file = "pages/$page.php";
 if (file_exists($page_file)) {
   include($page_file);
-} else {
+} else if (isset($_GET['error'])) {
+  include("pages/login.php"); }
+else {
   echo 'Página não encontrada';
 }
