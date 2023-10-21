@@ -33,6 +33,7 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/html/)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [BOOTSTRAP](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [PHP](https://www.php.net/docs.php)
 - [MYSQL](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
