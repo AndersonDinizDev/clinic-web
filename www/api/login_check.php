@@ -2,7 +2,7 @@
 
 require_once("../config/database.php");
 
-if($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -13,8 +13,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
   $row = $stmt->fetch();
 
 
-  if($row) {
-    if(!isset($_SESSION)) session_start();
+  if ($row) {
+    if (!isset($_SESSION)) session_start();
 
     $_SESSION['user-id'] = $row['id'];
     $_SESSION['email'] = $row['user-email'];
@@ -23,10 +23,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $check++;
   }
 
-  if(!$check) {
+  if (!$check) {
     header("Location: /login?error=login_error");
   } else {
     header("Location: /panel");
   }
-  
 }

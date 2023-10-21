@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['user-id']) {
+if ($_SESSION['user-id']) {
   header("Location: /panel");
 }
 ?>
