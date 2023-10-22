@@ -14,7 +14,7 @@
 }
 
 .container-fluid {
-  background: linear-gradient(to bottom, #3786e5 50%, #f4f9ff 50%);
+  background: linear-gradient(to bottom, #4723d9 50%, #f4f9ff 50%);
   min-height: 100vh;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .form-group > input {
-  width: 390px; /* Defina um valor máximo para evitar que os campos fiquem muito largos */
+  width: 390px;
   height: 56px;
   border-radius: 8px;
   border: 1.5px solid #abc9ed;
@@ -42,7 +42,7 @@
 
 .form-group > input:hover,
 .form-group > input:focus {
-  box-shadow: 0 0 5px #3786e5;
+  box-shadow: 0 0 5px #4723d9;
 }
 
 .form-group > input::placeholder {

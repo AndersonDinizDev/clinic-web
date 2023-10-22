@@ -13,7 +13,7 @@ if ($_SESSION['user-id']) {
   <link rel="stylesheet" href="../styles/styles-login.css">
   <link rel="stylesheet" href="../styles/texts-color.css">
   <link rel="stylesheet" href="../styles/texts-types.css">
-  <link rel="stylesheet" href="../styles/button-color.css">
+  <link rel="stylesheet" href="../styles/elements.css">
   <link rel="stylesheet" href="../styles/styles-login-responsive.css">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@ if ($_SESSION['user-id']) {
               <input type="checkbox" id="save-account">
               <label for="save-account" class="texts-type-4 texts-color-gray">Lembrar minha conta</label>
             </div>
-            <button class="btn btn-primary button-color-blue texts-type-5">Login</button>
+            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">Login</button>
           </div>
         </form>
         <footer class="login-footer mt-3">
