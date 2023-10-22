@@ -25,7 +25,7 @@ Painel de usuário e administração para utilização em uma plataforma de curs
 ## 💻 Requisitos:
 
 Antes de começar :checkered_flag:, você precisa ter o [Docker](https://docs.docker.com/) instalado para a criação dos containers. <br/><br/>
-"Alguns outros requisitos do projeto serão informados ao abrir o arquivo "clinic-web.code-workspace".
+"Alguns outros requisitos do projeto serão informados ao abrir o arquivo "plataforma-web.code-workspace".
 
 ## 🚀 Tecnologias:
 
@@ -41,12 +41,12 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 ```bash
 # Clone este projeto
-$ git clone https://github.com/andersondinizdev/clinic-web.git
+$ git clone https://github.com/andersondinizdev/plataforma-web.git
 # Acesse
-$ cd clinic-web
+$ cd plataforma-web
 # Abra o terminal e digite
-$ docker-compose up -d
+$ docker-compose up
 # O servidor será inicializado em <http://localhost:3001/>
 ```
 
-[⬆ Voltar ao topo](#Clinic-Web)<br>
+[⬆ Voltar ao topo](#Plataforma-Web)<br>
