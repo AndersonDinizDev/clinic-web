@@ -32,3 +32,17 @@
   font-weight: 600;
   line-height: normal;
 }
+
+.texts-type-6 {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.texts-type-7 {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
