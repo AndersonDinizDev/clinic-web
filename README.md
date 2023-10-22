@@ -1,4 +1,4 @@
-# Clinic-Web
+# Plataforma-Web
 
 <p align="center">
   <img alt="Linguagem principal do GitHub" src="https://img.shields.io/github/languages/top/andersondinizdev/clinic-web?style=for-the-badge">
@@ -15,7 +15,7 @@
 
 ## Descrição:
 
-Painel de usuário e administração para utilização em uma clínica médica.
+Painel de usuário e administração para utilização em uma plataforma de cursos online.
 
 ## ✨ Novidades:
 

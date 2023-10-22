@@ -19,7 +19,7 @@ if ($_SESSION['user-id']) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Clinic Web</title>
+  <title>Plataforma Web</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@ if ($_SESSION['user-id']) {
           </div>
         </form>
         <footer class="login-footer mt-3">
-          <p class="texts-type-4 texts-color-gray">© Clinic Web <?= date("Y") ?></p>
+          <p class="texts-type-4 texts-color-gray">© Plataforma Web <?= date("Y") ?></p>
         </footer>
       </div>
     </div>
