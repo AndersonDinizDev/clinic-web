@@ -26,7 +26,7 @@ body {
 .header {
   width: 100%;
   height: var(--header-height);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -54,7 +54,7 @@ body {
   width: 40px;
 }
 .l-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -30%;
   width: var(--nav-width);

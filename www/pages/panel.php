@@ -43,7 +43,7 @@ if (!$_SESSION['user-id']) {
   </div>
   <header class="header" id="header">
     <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-    <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+    <div class="header_img"> <img src="../assets//no-user.svg" alt="user-img"> </div>
   </header>
   <div class="l-navbar" id="nav-bar">
     <nav class="nav">
@@ -55,6 +55,9 @@ if (!$_SESSION['user-id']) {
       </div> <a href="../api/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
     </nav>
   </div>
+  <div class="w-100 height-100 bg-light" style="margin-top: 5rem">
+        <h4>Main Components</h4>
+    </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
