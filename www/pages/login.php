@@ -37,7 +37,7 @@ if ($_SESSION['user-id']) {
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
-        <h1 class="texts-color-white texts-type-1 d-flex align-items-center gap-3"><img src="../assets/logo.svg" alt="logo-img" />Clinic Web</h1>
+        <h1 class="texts-color-white texts-type-1 d-flex align-items-center gap-3"><img src="../assets/logo.svg" alt="logo-img" />Plataforma Web</h1>
         <form class="container login-area" method="post" action="../api/login_check.php">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <h2 class="text-center texts-type-2 texts-color-blue">Entre com suas Informações:</h2>
