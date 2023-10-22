@@ -48,8 +48,8 @@ if (!$_SESSION['user-id']) {
   <div class="l-navbar" id="nav-bar">
     <nav class="nav">
       <div> <a href="#" class="nav_logo"> <img class='nav_logo-icon' src="../assets/logo.svg" alt="logo-img"></img> <span class="nav_logo-name">Plataforma Web</span> </a>
-        <div class="nav_list"> <a href="#" data-content="inicio" class="nav_pages nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Início</span>
-          </a> <a href="#" data-content="aulas" class="nav_pages nav_link"> <i class='bx bx-video nav_icon'></i> <span class="nav_name">Aulas</span> </a> <a href="#" class="nav_pages nav_link">
+        <div class="nav_list"> <a href="#" data-content="home" class="nav_pages nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Início</span>
+          </a> <a href="#" data-content="lessons" class="nav_pages nav_link"> <i class='bx bx-video nav_icon'></i> <span class="nav_name">Aulas</span> </a> <a href="#" class="nav_pages nav_link">
             <i class='bx bx-book-bookmark nav_icon'></i> <span class="nav_name">Material de Estudo</span> </a> <a href="#" class="nav_pages nav_link"> <i class='bx bx-bookmark nav_icon'>
             </i> <span class="nav_name">Certificados</span> </a> <a href="#" class="nav_pages nav_link"> <i class='bx bx-conversation nav_icon'></i> <span class="nav_name">Fórum de Discussão</span> </a> </div>
       </div> <a href="../api/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>

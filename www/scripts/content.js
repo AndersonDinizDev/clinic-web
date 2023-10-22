@@ -31,7 +31,7 @@ function loadContent(contentName) {
 }
 
 window.addEventListener("load", function () {
-  loadContent("inicio");
+  loadContent("home");
 });
 
 navLinks.forEach((link) => {
