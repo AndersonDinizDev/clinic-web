@@ -39,9 +39,9 @@
 <div class="news-lessons mt-4 w-100">
   <h1 class="texts-type-6">Novidades</h1>
   <p class="texts-color-gray-1">Fique por dentro das novidades da plataforma.</p>
-  <hr style="height: 1px; border: 0; border-top: 1px solid #808080; margin-top: 1rem; width: 95%;" />
+  <hr style="height: 1px; border: 0; border-top: 1px solid #808080; margin-top: 1rem;" />
 </div>
-<div class="w-100 d-flex justify-content-around">
+<div class="news w-100 d-flex justify-content-around p-3 gap-3">
   <div id="news-lessons-table">
   </div>
   <div class="d-flex flex-column gap-3">

@@ -2,6 +2,10 @@
   margin-left: 2rem;
 }
 
+.news-lessons hr {
+  width: 95%;
+}
+
 #news-lessons-table {
   width: 980px;
   height: 508px;

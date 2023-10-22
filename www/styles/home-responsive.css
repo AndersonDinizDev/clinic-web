@@ -1,5 +1,4 @@
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 768px) {
   #carouselHome {
     width: 100%;
     height: 20rem;
@@ -8,7 +7,17 @@
   .carousel-item img {
     height: 20rem;
   }
- 
+
+  .news {
+    flex-direction: column;
+  }
+  #news-lessons-table {
+    width: 350px;
+    height: 245px;
+  }
+  .news-lessons > hr {
+    width: 85%;
+  }
 }
 
 @media screen and (min-width: 1537px) {
