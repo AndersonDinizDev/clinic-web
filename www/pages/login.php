@@ -29,7 +29,8 @@ if ($_SESSION['user-id']) {
     display: flex;
     align-items: center;
     top: 0;
-    z-index: 100000;">
+    background: rgba(0, 0, 0, .4);
+    z-index: 1000;">
     <div style="display: flex; margin: 0 auto;">
       <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;"></div>
     </div>
