@@ -1,14 +1,32 @@
 const principalContent = document.getElementById("principal-content");
-const navLinks = document.querySelectorAll(".nav_link");
+const navLinks = document.querySelectorAll(".nav_pages");
+
+function hideLoadingWithDelay() {
+  setTimeout(function() {
+    $('#loading').fadeOut(1000);
+  }, 2000);
+}
+
+function showLoading() {
+  $('#loading').show();
+}
+
+function hideLoading() {
+  $('#loading').fadeOut(1000);
+}
 
 function loadContent(contentName) {
+  showLoading()
+
   fetch(`/contents/${contentName}/index.php`)
     .then((response) => response.text())
     .then((data) => {
       principalContent.innerHTML = data;
+      hideLoading();
     })
     .catch((error) => {
       console.error("Erro ao carregar conteúdo: " + error);
+      hideLoading();
     });
 }
 
