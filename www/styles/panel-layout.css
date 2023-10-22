@@ -112,7 +112,7 @@ body {
 .active {
   color: var(--white-color);
 }
-.active::before {
+.active::before:not(.carousel-control-prev):not(.carousel-control-next) {
   content: "";
   position: absolute;
   left: 0;
