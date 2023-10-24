@@ -37,7 +37,7 @@
   </button>
 </div>
 <div class="news-lessons mt-4 w-100">
-  <h1 class="texts-type-6">Novidades</h1>
+  <h1 class="texts-type-6 d-flex gap-2"><box-icon name='news'></box-icon>Novidades</h1>
   <p class="texts-color-gray-1">Fique por dentro das novidades da plataforma.</p>
   <hr style="height: 1px; border: 0; border-top: 1px solid #808080; margin-top: 1rem;" />
 </div>
