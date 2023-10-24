@@ -49,7 +49,7 @@ if (!$_SESSION['user-id']) {
   </div>
   <header class="header" id="header">
     <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-    <div class="header_img"> <img src="../assets//no-user.svg" alt="user-img"> </div>
+    <div class="header_img"> <img src="../assets/no-user.svg" alt="user-img"> </div>
   </header>
   <div class="l-navbar" id="nav-bar">
     <nav class="nav">
