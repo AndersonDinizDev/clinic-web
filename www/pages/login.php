@@ -10,6 +10,8 @@ if ($_SESSION['user-id']) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/animations.min.css" integrity="sha512-GKHaATMc7acW6/GDGVyBhKV3rST+5rMjokVip0uTikmZHhdqFWC7fGBaq6+lf+DOS5BIO8eK6NcyBYUBCHUBXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/styles-login.css">
   <link rel="stylesheet" href="../styles/texts-color.css">
   <link rel="stylesheet" href="../styles/texts-types.css">
@@ -38,31 +40,40 @@ if ($_SESSION['user-id']) {
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
-        <h1 class="texts-color-white texts-type-1 d-flex align-items-center gap-3"><img src="../assets/logo.svg" alt="logo-img" />Plataforma Web</h1>
         <form class="container login-area" method="post" action="../api/login_check.php">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
-            <h2 class="text-center texts-type-2 texts-color-blue">Entre com suas Informações:</h2>
+            <img src="../assets/newlogo.svg" alt="logo-img" />
+            <h2 class="text-center texts-type-8 texts-color-black-1">Bem-vindo à nossa plataforma de cursos online, onde o conhecimento encontra o seu espaço.</h2>
             <div class="form-group">
-              <input class="texts-type-3 texts-color-blue p-3" name="email" type="email" id="email" placeholder="E-mail" autofocus />
+              <label class="texts-type-9 texts-color-black-1" for="email">Qual seu e-mail?</label>
+              <div>
+                <box-icon type='solid' color="#575b5d" name='envelope'></box-icon>
+                <input class="texts-type-3 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="email@email.com" autofocus />
+              </div>
             </div>
             <div class="form-group">
-              <input class="texts-type-3 texts-color-blue p-3" name="password" type="password" id="password" placeholder="Senha" />
+              <label class="texts-type-9 texts-color-black-1" for="password">Qual sua senha?</label>
+              <div>
+                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
+                <input class="texts-type-3 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" />
+              </div>
             </div>
-            <div class="form-check d-flex justify-content-start align-items-center w-100 gap-2">
-              <input type="checkbox" id="save-account">
-              <label for="save-account" class="texts-type-4 texts-color-gray">Lembrar minha conta</label>
+            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">ENTRAR <span class="texts-type-10">AGORA</span></button>
+            <div class="login-footer">
+              <a href="#" class="texts-color-black-1 texts-type-8">Não tem conta? <span class="texts-type-9">Click aqui.</span></a>
+              <a href="#" class="texts-color-black-1 texts-type-8">Esqueceu sua senha ?</a>
             </div>
-            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">Login</button>
           </div>
         </form>
         <footer class="login-footer mt-3">
-          <p class="texts-type-4 texts-color-gray">© Plataforma Web <?= date("Y") ?></p>
+          <p class="texts-type-4 texts-color-gray">© Web Cursos <?= date("Y") ?></p>
         </footer>
       </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     window.onload = function() {
       $('#loading').fadeOut(1000);

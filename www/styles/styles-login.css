@@ -14,7 +14,7 @@
 }
 
 .container-fluid {
-  background: linear-gradient(to bottom, #4723d9 50%, #f4f9ff 50%);
+  background-color: #e0e3e1;
   min-height: 100vh;
 }
 
@@ -25,27 +25,45 @@
 
 .login-area {
   width: 557px;
-  height: 527px;
+  height: 600px;
   background-color: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(27, 50, 79, 0.06);
-  border-radius: 12px;
+  border-top: 5px solid #4723d9;
 }
 
-.form-group > input {
-  width: 390px;
-  height: 56px;
+.login-elements > img {
+  width: 320px;
+}
+
+.login-elements > h2 {
+  width: 90%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 65px;
   border-radius: 8px;
-  border: 1.5px solid #abc9ed;
+  border: 1px solid #dcdcdc80;
+  background-color: #e0e3e1;
+}
+
+.form-group > div > input {
   outline: none;
-  transition: all 0.7s ease;
+  width: 90%;
+  border: none;
+  background-color: #e0e3e1;
 }
 
-.form-group > input:hover,
-.form-group > input:focus {
-  box-shadow: 0 0 5px #4723d9;
-}
-
-.form-group > input::placeholder {
+.form-group > div > input::placeholder {
   color: #c2c8cf;
 }
 
@@ -60,4 +78,22 @@
   border: 1px solid #abc9ed;
   background-color: #ffffff;
   border-radius: 3px;
+}
+
+.login-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 12px 0 15px;
+  margin-top: 1rem;
+}
+
+.login-footer > a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-footer > a:hover {
+  text-decoration: underline;
 }
