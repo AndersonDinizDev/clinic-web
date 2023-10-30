@@ -1,8 +1,4 @@
 @media screen and (max-width: 768px) {
-  .container-fluid {
-    background: linear-gradient(to bottom, #4723d9 20%, #f4f9ff 20%);
-  }
-
 
   .login-container {
     display: block;
@@ -18,13 +14,36 @@
     box-shadow: none;
     border-radius: 0;
     background-color: transparent;
+    position: static;
   }
 
   .form-group > input {
     width: 300px;
   }
 
+  .form-group > div {
+    width: 300px
+  }
+
+  .login-elements > button {
+    width: 300px;
+  }
+
+  .login-elements > h2 {
+    width: 100%;
+  }
+
   .form-check {
     margin-left: 0;
   }
+
+  .login-footer {
+    padding: 0;
+  }
+
+  .div-com-borda-superior::before {
+    width: 100vw;
+    right: 0;
+  }
+
 }
