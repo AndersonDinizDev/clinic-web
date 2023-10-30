@@ -30,7 +30,7 @@ if (!$_SESSION['user-id']) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Plataforma Web - Painel</title>
+  <title>Web Cursos - Plataforma</title>
 </head>
 
 <body id="body-pd">

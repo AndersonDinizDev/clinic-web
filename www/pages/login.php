@@ -21,7 +21,7 @@ if ($_SESSION['user-id']) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Plataforma Web</title>
+  <title>Web Cursos</title>
 </head>
 
 <body>
@@ -42,6 +42,7 @@ if ($_SESSION['user-id']) {
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
         <form class="container login-area" method="post" action="../api/login_check.php">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
+            <div class="div-com-borda-superior"></div>
             <img src="../assets/newlogo.svg" alt="logo-img" />
             <h2 class="text-center texts-type-8 texts-color-black-1">Bem-vindo à nossa plataforma de cursos online, onde o conhecimento encontra o seu espaço.</h2>
             <div class="form-group">
@@ -60,8 +61,8 @@ if ($_SESSION['user-id']) {
             </div>
             <button class="btn btn-primary button-color-blue texts-type-5 button-custom">ENTRAR <span class="texts-type-10">AGORA</span></button>
             <div class="login-footer">
-              <a href="#" class="texts-color-black-1 texts-type-8">Não tem conta? <span class="texts-type-9">Click aqui.</span></a>
-              <a href="#" class="texts-color-black-1 texts-type-8">Esqueceu sua senha ?</a>
+              <a href="#" class="texts-color-black-1 texts-type-7">Não tem conta? <span class="texts-type-11">Click aqui.</span></a>
+              <a href="#" class="texts-color-black-1 texts-type-7">Esqueceu sua senha ?</a>
             </div>
           </div>
         </form>
