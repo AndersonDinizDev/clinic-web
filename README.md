@@ -41,9 +41,9 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 ```bash
 # Clone este projeto
-$ git clone https://github.com/andersondinizdev/plataforma-web.git
+$ git clone https://github.com/andersondinizdev/web-cursos.git
 # Acesse
-$ cd plataforma-web
+$ cd web-cursos
 # Abra o terminal e digite
 $ docker-compose up
 # O servidor será inicializado em <http://localhost:3001/>
