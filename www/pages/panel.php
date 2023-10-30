@@ -58,7 +58,7 @@ if (!$_SESSION['user-id']) {
           </a> <a href="#" data-content="lessons" class="nav_pages nav_link"> <i class='bx bx-video nav_icon'></i> <span class="nav_name">Aulas</span> </a> <a href="#" class="nav_pages nav_link">
             <i class='bx bx-book-bookmark nav_icon'></i> <span class="nav_name">Material de Estudo</span> </a> <a href="#" class="nav_pages nav_link"> <i class='bx bx-bookmark nav_icon'>
             </i> <span class="nav_name">Certificados</span> </a> <a href="#" class="nav_pages nav_link"> <i class='bx bx-conversation nav_icon'></i> <span class="nav_name">Fórum de Discussão</span> </a> </div>
-      </div> <a href="../api/logout.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
+      </div> <a href="/logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sair</span> </a>
     </nav>
   </div>
   <div id="principal-content" class="w-100 bg-light d-flex flex-column pb-3" style="margin-top: 5rem">

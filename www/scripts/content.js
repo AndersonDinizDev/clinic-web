@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
           const newsLessonsTable =
             document.getElementById("news-lessons-table");
 
+          const newUsersTable = document.getElementById("news-users-table");
+
           function getNewsLessonsTable() {
             fetch("api/get_news_lessons.php", {
               method: "POST",
@@ -41,9 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
             })
               .then((response) => response.json())
               .then((data) => {
-
                 var tableHTML =
-                  "<table class='table table-hover table-striped table-bordered'>";
+                  "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
                 tableHTML += "<thead>";
                 tableHTML += "<tr>";
                 tableHTML +=
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHTML += "<th>Conteúdo</th>";
                 tableHTML +=
                   "<th style='border-top-right-radius: 8px;'>Adicionado em</th>";
-                tableHTML += "<tr>";
+                tableHTML += "</tr>";
                 tableHTML += "</thead>";
                 tableHTML += "<tbody>";
 
@@ -73,7 +74,45 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           }
 
+          function getNewUsers() {
+            fetch("api/get_new_users.php", {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                var tableUsersHTML =
+                  "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
+                tableUsersHTML += "<thead>";
+                tableUsersHTML += "<tr>";
+                tableUsersHTML +=
+                  "<th style='border-top-left-radius: 8px;'>Nome</th>";
+                tableUsersHTML += "<th style='border-top-right-radius: 8px;'>Entrou em</th>";
+                tableUsersHTML += "</tr>";
+                tableUsersHTML += "</thead>";
+                tableUsersHTML += "<tbody>";
+
+                data.forEach((users) => {
+                  tableUsersHTML += "<tr>";
+                  tableUsersHTML += "<td>" + users.name + "</td>";
+                  tableUsersHTML += "<td>" + users.creation + "</td>";
+                  tableUsersHTML += "</tr>";
+                });
+
+                tableUsersHTML += "</tbody>";
+                tableUsersHTML += "</table>";
+
+                newUsersTable.innerHTML = tableUsersHTML;
+              })
+              .catch((error) => {
+                console.error("Ocorreu um erro:", error);
+              });
+          }
+
           getNewsLessonsTable();
+          getNewUsers();
         });
         document.body.appendChild(scriptHome);
       })
