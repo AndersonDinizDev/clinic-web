@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("news-lessons-table");
 
           const newUsersTable = document.getElementById("news-users-table");
+          const newUpdateTable = document.getElementById("news-updates-table");
 
           function getNewsLessonsTable() {
             fetch("api/get_news_lessons.php", {
@@ -48,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHTML += "<thead>";
                 tableHTML += "<tr>";
                 tableHTML +=
-                  "<th style='border-top-left-radius: 8px;'>Categoria</th>";
-                tableHTML += "<th>Conteúdo</th>";
+                  "<th class='texts-type-12' style='border-top-left-radius: 8px;'>Categoria</th>";
+                tableHTML += "<th class='texts-type-12'>Conteúdo</th>";
                 tableHTML +=
-                  "<th style='border-top-right-radius: 8px;'>Adicionado em</th>";
+                  "<th class='texts-type-12' style='border-top-right-radius: 8px;'>Adicionado em</th>";
                 tableHTML += "</tr>";
                 tableHTML += "</thead>";
                 tableHTML += "<tbody>";
@@ -88,16 +89,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableUsersHTML += "<thead>";
                 tableUsersHTML += "<tr>";
                 tableUsersHTML +=
-                  "<th style='border-top-left-radius: 8px;'>Nome</th>";
-                tableUsersHTML += "<th style='border-top-right-radius: 8px;'>Entrou em</th>";
+                  "<th class='texts-type-12' style='border-top-left-radius: 8px;'>Nome</th>";
+                tableUsersHTML +=
+                  "<th class='texts-type-12' style='border-top-right-radius: 8px;'>Entrou em</th>";
                 tableUsersHTML += "</tr>";
                 tableUsersHTML += "</thead>";
                 tableUsersHTML += "<tbody>";
 
                 data.forEach((users) => {
                   tableUsersHTML += "<tr>";
-                  tableUsersHTML += "<td>" + users.name + "</td>";
-                  tableUsersHTML += "<td>" + users.creation + "</td>";
+                  tableUsersHTML += "<td class='texts-type-7'>" + users.name + "</td>";
+                  tableUsersHTML += "<td class='texts-type-7'>" + users.creation + "</td>";
                   tableUsersHTML += "</tr>";
                 });
 
@@ -111,8 +113,42 @@ document.addEventListener("DOMContentLoaded", function () {
               });
           }
 
+          function getNewUpdates() {
+            fetch("api/get_new_updates.php", {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                var tableUpdatesHTML =
+                  "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
+
+                tableUpdatesHTML += "<thead>";
+                tableUpdatesHTML += "<tr>";
+                tableUpdatesHTML +=
+                  "<th class='texts-type-12' style='border-top-left-radius: 8px'>Atualização</th>";
+                tableUpdatesHTML +=
+                  "<th class='texts-type-12' style='border-top-right-radius: 8px'>Adicionado em</th>";
+                tableUpdatesHTML += "</tr>";
+                tableUpdatesHTML += "</thead>";
+                tableUpdatesHTML += "<tbody>";
+
+                data.forEach((updates) => {
+                  tableUpdatesHTML += "<tr>";
+                  tableUpdatesHTML += "<td class='texts-type-7'>" + updates.newupdate;
+                  tableUpdatesHTML += "<td class='texts-type-7'>" + updates.creation;
+                  tableUpdatesHTML += "</tr>";
+
+                  newUpdateTable.innerHTML = tableUpdatesHTML;
+                });
+              });
+          }
+
           getNewsLessonsTable();
           getNewUsers();
+          getNewUpdates();
         });
         document.body.appendChild(scriptHome);
       })

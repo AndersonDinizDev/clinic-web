@@ -40,11 +40,11 @@ h1 {
 
 table.custom-table th,
 table.custom-table td {
-  border-right: 1px solid #dee2e6; /* Adicione uma borda à direita de cada célula */
-  padding: 8px; /* Adicione um espaçamento interno para melhor aparência */
+  border-right: 1px solid #dee2e6;
+  padding: 8px;
 }
 
 table.custom-table th:last-child,
 table.custom-table td:last-child {
-  border-right: none; /* Remove a borda da última célula */
+  border-right: none;
 }
