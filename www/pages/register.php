@@ -78,8 +78,8 @@ require_once(__DIR__ . '/../config/config.php');
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="password">Chave de acesso<span id="key-span" class="texts-type-11 texts-color-red"></span></label>
-              <div>
-                <box-icon name='key' color="#575b5d" type='solid'></box-icon>
+              <div id="div-key">
+                <box-icon id="icon-key" name='key' color="#575b5d" type='solid'></box-icon>
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="key" type="text" id="key" placeholder="8462910357129834067" maxlength="19" />
               </div>
             </div>

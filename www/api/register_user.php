@@ -33,7 +33,7 @@ if ($data) {
     $stmt->execute();
     $check++;
   } else {
-    $response['success'] = false;
+    $response['keyError'] = true;
   }
 
   if (!$check) {

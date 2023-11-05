@@ -8,10 +8,12 @@ const divName = document.getElementById("div-name");
 const divEmail = document.getElementById("div-email");
 const divPassword = document.getElementById("div-password");
 const divCPassword = document.getElementById("div-c-password");
+const divKey = document.getElementById("div-key");
 const iconName = document.getElementById("icon-name");
 const iconEmail = document.getElementById("icon-email");
 const iconPassword = document.getElementById("icon-password");
 const iconCPassword = document.getElementById("icon-c-password");
+const iconKey = document.getElementById("icon-key");
 const spanEmail = document.getElementById("email-span");
 const spanName = document.getElementById("name-span");
 const spanPassword = document.getElementById("password-span");
@@ -60,14 +62,38 @@ registerSubmit.addEventListener("click", function () {
     validateField(false, divEmail, iconEmail, spanEmail, "Email incorreto");
     hasError = true;
   }
-  validateField(password, divPassword, iconPassword, spanPassword, "Campo vazio ou com menos de 8 caracteres");
+  validateField(
+    password,
+    divPassword,
+    iconPassword,
+    spanPassword,
+    "Campo vazio ou com menos de 8 caracteres"
+  );
   if (!password || password.length < 8) {
-    validateField(false, divPassword, iconPassword, spanPassword, "Campo vazio ou com menos de 8 caracteres");
+    validateField(
+      false,
+      divPassword,
+      iconPassword,
+      spanPassword,
+      "Campo vazio ou com menos de 8 caracteres"
+    );
     hasError = true;
   }
-  validateField(cPassword, divCPassword, iconCPassword, spanCPassword, "Senhas não coincidem");
+  validateField(
+    cPassword,
+    divCPassword,
+    iconCPassword,
+    spanCPassword,
+    "Senhas não coincidem"
+  );
   if (!cPassword || cPassword.length < 8 || password !== cPassword) {
-    validateField(false, divCPassword, iconCPassword, spanCPassword, "Senhas não coincidem");
+    validateField(
+      false,
+      divCPassword,
+      iconCPassword,
+      spanCPassword,
+      "Senhas não coincidem"
+    );
     hasError = true;
   }
 
@@ -98,10 +124,14 @@ registerSubmit.addEventListener("click", function () {
     .then((data) => {
       if (data.success) {
         alertMessage("Usuário cadastrado com sucesso!", "success");
+        highlightField(divKey, iconKey, true)
 
         setTimeout(() => {
           window.location.assign("/login");
         }, 2000);
+      } else if (data.keyError) {
+        alertMessage("Chave de acesso inválida.", "error");
+        highlightField(divKey, iconKey, false)
       } else {
         alertMessage("Insira suas informações corretamente.", "error");
       }
