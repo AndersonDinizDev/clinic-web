@@ -12,6 +12,11 @@ const iconName = document.getElementById("icon-name");
 const iconEmail = document.getElementById("icon-email");
 const iconPassword = document.getElementById("icon-password");
 const iconCPassword = document.getElementById("icon-c-password");
+const spanEmail = document.getElementById("email-span");
+const spanName = document.getElementById("name-span");
+const spanPassword = document.getElementById("password-span");
+const spanCPassword = document.getElementById("c-password-span");
+const spanKey = document.getElementById("key-span");
 
 function isValidEmail(email) {
   var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -38,29 +43,31 @@ registerSubmit.addEventListener("click", function () {
 
   var hasError = false;
 
-  function validateField(value, element, icon) {
+  function validateField(value, element, icon, item, message) {
     if (!value) {
       highlightField(element, icon, false);
+      item.textContent = message;
       hasError = true;
     } else {
       highlightField(element, icon, true);
+      item.textContent = "";
     }
   }
 
-  validateField(name, divName, iconName);
-  validateField(email, divEmail, iconEmail);
+  validateField(name, divName, iconName, spanName, "Insira um nome");
+  validateField(email, divEmail, iconEmail, spanEmail, "Email incorreto");
   if (email && !isValidEmail(email)) {
-    validateField(false, divEmail, iconEmail);
+    validateField(false, divEmail, iconEmail, spanEmail, "Email incorreto");
     hasError = true;
   }
-  validateField(password, divPassword, iconPassword);
+  validateField(password, divPassword, iconPassword, spanPassword, "Campo vazio ou com menos de 8 caracteres");
   if (!password || password.length < 8) {
-    validateField(false, divPassword, iconPassword);
+    validateField(false, divPassword, iconPassword, spanPassword, "Campo vazio ou com menos de 8 caracteres");
     hasError = true;
   }
-  validateField(cPassword, divCPassword, iconCPassword);
+  validateField(cPassword, divCPassword, iconCPassword, spanCPassword, "Senhas não coincidem");
   if (!cPassword || cPassword.length < 8 || password !== cPassword) {
-    validateField(false, divCPassword, iconCPassword);
+    validateField(false, divCPassword, iconCPassword, spanCPassword, "Senhas não coincidem");
     hasError = true;
   }
 

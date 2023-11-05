@@ -49,38 +49,38 @@ require_once(__DIR__ . '/../config/config.php');
             <img src="../assets/logo.svg" alt="logo-img" />
             <h2 class="text-center texts-type-8 texts-color-black-1">Preencha os campos para realizar o cadastro.</h2>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="name">Informe seu nome</label>
+              <label class="texts-type-9 texts-color-black-1" for="name">Informe seu nome<span id="name-span" class="texts-type-11 texts-color-red"></span></label>
               <div id="div-name">
                 <box-icon id="icon-name" type='solid' color="#575b5d" name='user'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" autofocus required/>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" maxlength="20" autofocus required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="email">Seu e-mail</label>
+              <label class="texts-type-9 texts-color-black-1" for="email">Seu e-mail <span id="email-span" class="texts-type-11 texts-color-red"></span></label>
               <div id="div-email">
                 <box-icon id="icon-email" type='solid' color="#575b5d" name='envelope'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" required/>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" maxlength="50" required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="password">Sua senha</label>
+              <label class="texts-type-9 texts-color-black-1" for="password">Sua senha<span id="password-span" class="texts-type-11 texts-color-red"></span></label>
               <div id="div-password">
                 <box-icon id="icon-password" name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" required/>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" maxlength="20" required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="password">Confirme sua senha</label>
+              <label class="texts-type-9 texts-color-black-1" for="password">Confirme sua senha<span id="c-password-span" class="texts-type-11 texts-color-red"></span></label>
               <div id="div-c-password">
                 <box-icon id="icon-c-password" name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" required/>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" maxlength="20" required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="password">Chave de acesso</label>
+              <label class="texts-type-9 texts-color-black-1" for="password">Chave de acesso<span id="key-span" class="texts-type-11 texts-color-red"></span></label>
               <div>
-                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="key" type="text" id="key" placeholder="8462910357129834067" />
+                <box-icon name='key' color="#575b5d" type='solid'></box-icon>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="key" type="text" id="key" placeholder="8462910357129834067" maxlength="19" />
               </div>
             </div>
             <button id="register-submit" class="btn btn-primary button-color-blue texts-type-5 button-custom">CADASTRAR <span class="texts-type-10">AGORA</span></button>
