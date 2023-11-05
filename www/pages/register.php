@@ -24,10 +24,10 @@ require_once(__DIR__ . '/../config/config.php');
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title><?php echo $response[0]['sitename'] ?> - Login</title>
+  <title><?php echo $response[0]['sitename'] ?> - Cadastro</title>
 </head>
 
-<body>
+<body class="register">
   <div id="loading" style="position: fixed;
     width: 100%;
     height: 100%;
@@ -47,25 +47,45 @@ require_once(__DIR__ . '/../config/config.php');
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <div class="div-com-borda-superior"></div>
             <img src="../assets/logo.svg" alt="logo-img" />
-            <h2 class="text-center texts-type-8 texts-color-black-1">Bem-vindo à nossa plataforma de cursos online, onde o conhecimento encontra o seu espaço.</h2>
+            <h2 class="text-center texts-type-8 texts-color-black-1">Preencha os campos para realizar o cadastro.</h2>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="email">Qual seu e-mail?</label>
+              <label class="texts-type-9 texts-color-black-1" for="name">Informe seu nome</label>
+              <div>
+                <box-icon type='solid' color="#575b5d" name='user'></box-icon>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" autofocus />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="texts-type-9 texts-color-black-1" for="name">Seu e-mail</label>
               <div>
                 <box-icon type='solid' color="#575b5d" name='envelope'></box-icon>
-                <input class="texts-type-3 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="email@email.com" autofocus />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" autofocus />
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="password">Qual sua senha?</label>
+              <label class="texts-type-9 texts-color-black-1" for="password">Sua senha</label>
               <div>
                 <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-3 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" />
               </div>
             </div>
-            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">ENTRAR <span class="texts-type-10">AGORA</span></button>
+            <div class="form-group">
+              <label class="texts-type-9 texts-color-black-1" for="password">Confirme sua senha</label>
+              <div>
+                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="texts-type-9 texts-color-black-1" for="password">Chave de acesso</label>
+              <div>
+                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="key" type="text" id="key" placeholder="8462910357129834067" />
+              </div>
+            </div>
+            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">CADASTRAR <span class="texts-type-10">AGORA</span></button>
             <div class="login-footer">
-              <a href="/register" class="texts-color-black-1 texts-type-7">Não tem conta? <span class="texts-type-11">Click aqui.</span></a>
-              <a href="#" class="texts-color-black-1 texts-type-7">Esqueceu sua senha ?</a>
+              <a href="/login" class="texts-color-black-1 texts-type-7">Já tem uma conta? <span class="texts-type-11">Click aqui.</span></a>
             </div>
           </div>
         </form>

@@ -47,8 +47,16 @@ input:-webkit-autofill:active{
   position: relative;
 }
 
+body.register .login-area {
+  height: 700px;
+}
+
 .login-elements > img {
   width: 180px;
+}
+
+body.register .login-elements > img {
+  width: 100px;
 }
 
 .login-elements > h2 {
@@ -70,6 +78,14 @@ input:-webkit-autofill:active{
   border-radius: 8px;
   border: 1px solid #dcdcdc80;
   background-color: #e0e3e1;
+}
+
+body.register .form-group > div {
+  height: 40px;
+}
+
+body.register .form-group > div > input {
+  height: 20px;
 }
 
 .form-group > div > input {
