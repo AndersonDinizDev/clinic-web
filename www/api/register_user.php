@@ -8,9 +8,16 @@ if ($data) {
   $email = $data->user_email;
   $password = $data->user_password;
   $c_password = $data->user_c_password;
+  $key = $data->user_key;
   $check = 0;
 
-  if ($password = $c_password) {
+  $stmt = $database->prepare("SELECT keys FROM users WHERE key = :user_key");
+  $stmt->bindValue(":user_key", $key);
+  $stmt->execute();
+
+  $server_key = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  if ($server_key) {
 
     $stmt = $database->prepare("INSERT INTO users (name, email, password) VALUES (:user_name, :user_email, :user_password)");
     $stmt->bindValue(":user_name", $name);

@@ -2,6 +2,7 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const cPasswordInput = document.getElementById("c-password");
+const keyInput = document.getElementById("key");
 const registerSubmit = document.getElementById("register-submit");
 const divName = document.getElementById("div-name");
 const divEmail = document.getElementById("div-email");
@@ -33,6 +34,7 @@ registerSubmit.addEventListener("click", function () {
   const email = emailInput.value;
   const password = passwordInput.value;
   const cPassword = cPasswordInput.value;
+  const key = keyInput.value;
 
   var hasError = false;
 
@@ -49,13 +51,18 @@ registerSubmit.addEventListener("click", function () {
   validateField(email, divEmail, iconEmail);
   if (email && !isValidEmail(email)) {
     validateField(false, divEmail, iconEmail);
+    hasError = true;
   }
-  validateField(password || password.length >= 8, divPassword, iconPassword);
-  validateField(
-    password && password === cPassword,
-    divCPassword,
-    iconCPassword
-  );
+  validateField(password, divPassword, iconPassword);
+  if (!password || password.length < 8) {
+    validateField(false, divPassword, iconPassword);
+    hasError = true;
+  }
+  validateField(cPassword, divCPassword, iconCPassword);
+  if (!cPassword || cPassword.length < 8 || password !== cPassword) {
+    validateField(false, divCPassword, iconCPassword);
+    hasError = true;
+  }
 
   if (hasError) {
     alertMessage("Informe suas informações corretamente.", "error");
@@ -72,6 +79,7 @@ registerSubmit.addEventListener("click", function () {
       user_email: email,
       user_password: password,
       user_c_password: cPassword,
+      user_key: key,
     }),
   })
     .then((response) => {
