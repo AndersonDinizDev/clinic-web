@@ -1,5 +1,9 @@
 @media screen and (max-width: 768px) {
 
+  .container-fluid {
+    background-color: #ffffff;
+  }
+
   .login-container {
     display: block;
   }

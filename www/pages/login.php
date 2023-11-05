@@ -3,6 +3,8 @@ session_start();
 if ($_SESSION['user-id']) {
   header("Location: /panel");
 }
+
+require_once(__DIR__ . '/../config/config.php');
 ?>
 <html lang="pt-br">
 
@@ -21,7 +23,7 @@ if ($_SESSION['user-id']) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Web Cursos</title>
+  <title><?php echo $response[0]['sitename'] ?> - Login</title>
 </head>
 
 <body>
@@ -43,7 +45,7 @@ if ($_SESSION['user-id']) {
         <form class="container login-area" method="post" action="../api/login_check.php">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <div class="div-com-borda-superior"></div>
-            <img src="../assets/newlogo.svg" alt="logo-img" />
+            <img src="../assets/logo.svg" alt="logo-img" />
             <h2 class="text-center texts-type-8 texts-color-black-1">Bem-vindo à nossa plataforma de cursos online, onde o conhecimento encontra o seu espaço.</h2>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="email">Qual seu e-mail?</label>
@@ -67,7 +69,7 @@ if ($_SESSION['user-id']) {
           </div>
         </form>
         <footer class="login-footer mt-3">
-          <p class="texts-type-4 texts-color-gray">© Web Cursos <?= date("Y") ?></p>
+          <p class="texts-type-4 texts-color-gray">© <?php echo $response[0]['sitename'] ?> <?= date("Y") ?></p>
         </footer>
       </div>
     </div>
