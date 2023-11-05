@@ -2,10 +2,12 @@
 
 require_once("../config/database.php");
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+$data = json_decode(file_get_contents("php://input"));
 
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+if ($data) {
+
+  $email = $data->user_email;
+  $password = $data->user_password;
   $check = 0;
 
   $stmt = $database->prepare("SELECT id, name, email FROM users WHERE email = ? AND password = ?");
@@ -24,8 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 
   if (!$check) {
-    header("Location: /login?error=login_error");
+    $response['success'] = false;
   } else {
-    header("Location: /panel");
+    $response['success'] = true;
   }
 }
+
+header('Content-Typea: application/json');
+
+echo json_encode($response);

@@ -43,7 +43,7 @@ require_once(__DIR__ . '/../config/config.php');
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
-        <form class="container login-area" method="post" action="../api/login_check.php">
+        <div class="container login-area">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <div class="div-com-borda-superior"></div>
             <img src="../assets/logo.svg" alt="logo-img" />
@@ -62,13 +62,13 @@ require_once(__DIR__ . '/../config/config.php');
                 <input class="texts-type-3 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" />
               </div>
             </div>
-            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">ENTRAR <span class="texts-type-10">AGORA</span></button>
+            <button id="button-submit" class="btn btn-primary button-color-blue texts-type-5 button-custom">ENTRAR <span class="texts-type-10">AGORA</span></button>
             <div class="login-footer">
               <a href="/register" class="texts-color-black-1 texts-type-7">Não tem conta? <span class="texts-type-11">Click aqui.</span></a>
               <a href="#" class="texts-color-black-1 texts-type-7">Esqueceu sua senha ?</a>
             </div>
           </div>
-        </form>
+        </div>
         <footer class="login-footer mt-3">
           <p class="texts-type-4 texts-color-gray">© <?php echo $response[0]['sitename'] ?> <?= date("Y") ?></p>
         </footer>
@@ -79,6 +79,7 @@ require_once(__DIR__ . '/../config/config.php');
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../scripts/alerts.js"></script>
+  <script src="../scripts/teste.js"></script>
   <script>
     const searchParams = new URLSearchParams(window.location.search);
 
