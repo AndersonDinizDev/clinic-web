@@ -50,29 +50,29 @@ require_once(__DIR__ . '/../config/config.php');
             <h2 class="text-center texts-type-8 texts-color-black-1">Preencha os campos para realizar o cadastro.</h2>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="name">Informe seu nome</label>
-              <div>
-                <box-icon type='solid' color="#575b5d" name='user'></box-icon>
+              <div id="div-name">
+                <box-icon id="icon-name" type='solid' color="#575b5d" name='user'></box-icon>
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" autofocus required/>
               </div>
             </div>
             <div class="form-group">
-              <label class="texts-type-9 texts-color-black-1" for="name">Seu e-mail</label>
-              <div>
-                <box-icon type='solid' color="#575b5d" name='envelope'></box-icon>
+              <label class="texts-type-9 texts-color-black-1" for="email">Seu e-mail</label>
+              <div id="div-email">
+                <box-icon id="icon-email" type='solid' color="#575b5d" name='envelope'></box-icon>
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" required/>
               </div>
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="password">Sua senha</label>
-              <div>
-                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
+              <div id="div-password">
+                <box-icon id="icon-password" name='lock' color="#575b5d" type='solid'></box-icon>
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" required/>
               </div>
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="password">Confirme sua senha</label>
-              <div>
-                <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
+              <div id="div-c-password">
+                <box-icon id="icon-c-password" name='lock' color="#575b5d" type='solid'></box-icon>
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" required/>
               </div>
             </div>
