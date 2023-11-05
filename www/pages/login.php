@@ -19,6 +19,7 @@ require_once(__DIR__ . '/../config/config.php');
   <link rel="stylesheet" href="../styles/texts-types.css">
   <link rel="stylesheet" href="../styles/elements.css">
   <link rel="stylesheet" href="../styles/styles-login-responsive.css">
+  <link rel="stylesheet" href="../styles/alert-styles.css">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +78,14 @@ require_once(__DIR__ . '/../config/config.php');
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../scripts/alerts.js"></script>
   <script>
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (searchParams.has('error') && searchParams.get('error') === 'login_error') {
+
+      alertMessage("Informações de login incorretas.", "error");
+    }
     window.onload = function() {
       $('#loading').fadeOut(1000);
     };
