@@ -1,4 +1,4 @@
-# Web-Cursos
+# Platform-Courses
 
 <p align="center">
   <img alt="Linguagem principal do GitHub" src="https://img.shields.io/github/languages/top/andersondinizdev/clinic-web?style=for-the-badge">
@@ -41,12 +41,12 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 ```bash
 # Clone este projeto
-$ git clone https://github.com/andersondinizdev/web-cursos.git
+$ git clone https://github.com/andersondinizdev/platform-courses.git
 # Acesse
-$ cd web-cursos
+$ cd platform-courses
 # Abra o terminal e digite
 $ docker-compose up
 # O servidor será inicializado em <http://localhost:3001/>
 ```
 
-[⬆ Voltar ao topo](#Web-Cursos)<br>
+[⬆ Voltar ao topo](#Platform-Courses)<br>
