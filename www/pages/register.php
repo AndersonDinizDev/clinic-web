@@ -43,7 +43,7 @@ require_once(__DIR__ . '/../config/config.php');
   <div class="container-fluid">
     <div class="container d-flex justify-content-center align-items-center">
       <div class="container login-container d-flex justify-content-center align-items-center flex-column">
-        <form class="container login-area" method="post" action="../api/login_check.php">
+        <div class="container login-area">
           <div class="login-elements d-flex justify-content-center align-items-center flex-column h-100 gap-3">
             <div class="div-com-borda-superior"></div>
             <img src="../assets/logo.svg" alt="logo-img" />
@@ -52,28 +52,28 @@ require_once(__DIR__ . '/../config/config.php');
               <label class="texts-type-9 texts-color-black-1" for="name">Informe seu nome</label>
               <div>
                 <box-icon type='solid' color="#575b5d" name='user'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" autofocus />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="name" type="text" id="name" placeholder="Anderson Diniz" autofocus required/>
               </div>
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="name">Seu e-mail</label>
               <div>
                 <box-icon type='solid' color="#575b5d" name='envelope'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" autofocus />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="email" type="email" id="email" placeholder="teste@teste.com" required/>
               </div>
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="password">Sua senha</label>
               <div>
                 <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="password" type="password" id="password" placeholder="Senha" required/>
               </div>
             </div>
             <div class="form-group">
               <label class="texts-type-9 texts-color-black-1" for="password">Confirme sua senha</label>
               <div>
                 <box-icon name='lock' color="#575b5d" type='solid'></box-icon>
-                <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" />
+                <input class="texts-type-14 texts-color-gray-1 p-3" name="c-password" type="password" id="c-password" placeholder="Confirmar senha" required/>
               </div>
             </div>
             <div class="form-group">
@@ -83,12 +83,12 @@ require_once(__DIR__ . '/../config/config.php');
                 <input class="texts-type-14 texts-color-gray-1 p-3" name="key" type="text" id="key" placeholder="8462910357129834067" />
               </div>
             </div>
-            <button class="btn btn-primary button-color-blue texts-type-5 button-custom">CADASTRAR <span class="texts-type-10">AGORA</span></button>
+            <button id="register-submit" class="btn btn-primary button-color-blue texts-type-5 button-custom">CADASTRAR <span class="texts-type-10">AGORA</span></button>
             <div class="login-footer">
               <a href="/login" class="texts-color-black-1 texts-type-7">Já tem uma conta? <span class="texts-type-11">Click aqui.</span></a>
             </div>
           </div>
-        </form>
+        </div>
         <footer class="login-footer mt-3">
           <p class="texts-type-4 texts-color-gray">© <?php echo $response[0]['sitename'] ?> <?= date("Y") ?></p>
         </footer>
@@ -99,6 +99,7 @@ require_once(__DIR__ . '/../config/config.php');
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../scripts/alerts.js"></script>
+  <script src="../scripts/register_user.js"></script>
   <script>
     const searchParams = new URLSearchParams(window.location.search);
 

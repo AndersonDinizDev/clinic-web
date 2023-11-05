@@ -24,7 +24,11 @@ buttonSubmit.addEventListener("click", function () {
     })
     .then((data) => {
       if (data.success) {
-        window.location.assign("/panel");
+        alertMessage("Credenciais validadas com sucesso !", "success");
+
+        setTimeout(() => {
+          window.location.assign("/panel");
+        }, 2000);
       } else {
         alertMessage("Informações de login incorretas.", "error");
       }

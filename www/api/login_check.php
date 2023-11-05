@@ -32,6 +32,6 @@ if ($data) {
   }
 }
 
-header('Content-Typea: application/json');
+header('Content-Type: application/json');
 
 echo json_encode($response);
