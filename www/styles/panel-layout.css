@@ -53,6 +53,30 @@ body {
 .header_img img {
   width: 40px;
 }
+
+.user-header {
+  display: flex;
+  gap: 15px;
+}
+
+.dropdown {
+  max-width: 10px;
+}
+
+.dropdown-menu {
+  top: 1.8rem !important;
+}
+
+.user-info > p {
+  margin: 0;
+  padding: 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .l-navbar {
   position: fixed;
   top: 0;

@@ -88,3 +88,17 @@
   font-weight: 400;
   line-height: normal;
 }
+
+.texts-type-15 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.texts-type-16 {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
