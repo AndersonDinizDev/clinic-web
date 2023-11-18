@@ -10,7 +10,7 @@ if ($data) {
   $password = $data->user_password;
   $check = 0;
 
-  $stmt = $database->prepare("SELECT id, name, email FROM users WHERE email = ? AND password = ?");
+  $stmt = $database->prepare("SELECT id, name, email, image, level FROM users WHERE email = ? AND password = ?");
   $stmt->execute([$email, sha1($password)]);
   $row = $stmt->fetch();
 
@@ -19,7 +19,10 @@ if ($data) {
     if (!isset($_SESSION)) session_start();
 
     $_SESSION['user-id'] = $row['id'];
-    $_SESSION['email'] = $row['user-email'];
+    $_SESSION['user-name'] = $row['name'];
+    $_SESSION['user-email'] = $row['email'];
+    $_SESSION['user-level'] = $row['level'];
+    $_SESSION['user-image'] = $row['image'];
     $exp = time() + 60 * 60 * 24 * 30;
     setcookie('user-id', $row['id'], $exp);
     $check++;

@@ -2,7 +2,9 @@
 session_start();
 
 if ($_COOKIE['user-id']) {
-  $_SESSION['user-id'] = $_COOKIE['user-id'];
+  $_COOKIE['user-id'] = $_SESSION['user-id'];
+
+  $userId = $_SESSION['user-id'];
 }
 
 if (!$_SESSION['user-id']) {
@@ -10,6 +12,9 @@ if (!$_SESSION['user-id']) {
 }
 
 require_once(__DIR__ . '/../config/config.php');
+
+$siteConfig = getSiteConfig($database);
+$userConfig = getUserInfo($database, $userId);
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +38,7 @@ require_once(__DIR__ . '/../config/config.php');
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title><?php echo $response[0]['sitename'] ?> - Plataforma</title>
+  <title><?php echo $siteConfig[0]['sitename'] ?> - Plataforma</title>
 </head>
 
 <body id="body-pd">
@@ -53,18 +58,18 @@ require_once(__DIR__ . '/../config/config.php');
   <header class="header" id="header">
     <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     <div class="user-header">
-      <div class="header_img"> <img src="../assets/no-user.svg" alt="user-img"> </div>
+      <div class="header_img"> <img src="../assets/avatar/<?= $userConfig[0]['image'] ? $userConfig[0]['image'] : 'no-user.svg' ?>" alt="user-img"> </div>
       <div class="user-info">
-        <p class="texts-type-15">Anderson</p>
-        <p class="texts-type-16">Usuário</p>
+        <p class="texts-type-15"><?= $userConfig[0]['name'] ?></p>
+        <p class="texts-type-16"><?= $userConfig[0]['level'] == 0 ? 'Usuário' : 'Admin' ?></p>
       </div>
       <div class="dropdown">
         <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" href="#">Opções do Perfil</a></li>
+          <li><a class="dropdown-item" href="#">Opções da Conta</a></li>
+          <li><a href="/logout" class="dropdown-item" href="#">Sair</a></li>
         </ul>
       </div>
     </div>
@@ -82,7 +87,7 @@ require_once(__DIR__ . '/../config/config.php');
   <div id="principal-content" class="w-100 bg-light d-flex flex-column pb-3" style="margin-top: 5rem">
   </div>
   <footer class="w-100 pt-3">
-    <p class="text-center texts-type-7" style="opacity: 30%;">© <?php echo $response[0]['sitename'] ?> <?php echo date("Y") ?></p>
+    <p class="text-center texts-type-7" style="opacity: 30%;">© <?php echo $siteConfig[0]['sitename'] ?> <?php echo date("Y") ?></p>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.min.js" integrity="sha512-y8/3lysXD6CUJkBj4RZM7o9U0t35voPBOSRHLvlUZ2zmU+NLQhezEpe/pMeFxfpRJY7RmlTv67DYhphyiyxBRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
