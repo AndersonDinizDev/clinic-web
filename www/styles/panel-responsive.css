@@ -2,4 +2,14 @@
   footer > p {
     margin-left: 0;
   }
+
+  .dropdown-menu {
+    right: 0rem !important;
+    top: 1.5rem !important;
+  }
+  .user-notify > .dropdown-menu {
+    right: 0rem !important;
+    top: 1rem !important;
+  }
+  
 }

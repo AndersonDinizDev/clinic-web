@@ -58,6 +58,14 @@ $userConfig = getUserInfo($database, $userId);
   <header class="header" id="header">
     <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
     <div class="user-header">
+      <div class="user-notify dropdown">
+        <a type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../assets/icons/notify.svg" alt="notify-img" />
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Notificação</a></li>
+        </ul>
+      </div>
       <div class="header_img"> <img src="../assets/avatar/<?= $userConfig[0]['image'] ? $userConfig[0]['image'] : 'no-user.svg' ?>" alt="user-img"> </div>
       <div class="user-info">
         <p class="texts-type-15"><?= $userConfig[0]['name'] ?></p>

@@ -77,6 +77,20 @@ body {
   flex-direction: column;
 }
 
+.user-notify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-notify > .dropdown-menu {
+  right: -10rem !important;
+}
+
+.user-notify > a {
+  cursor: pointer;
+}
+
 .l-navbar {
   position: fixed;
   top: 0;
