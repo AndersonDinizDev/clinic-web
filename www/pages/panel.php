@@ -63,7 +63,8 @@ $userConfig = getUserInfo($database, $userId);
           <img src="../assets/icons/notify.svg" alt="notify-img" />
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Notificação</a></li>
+          <li><a class="dropdown-item texts-type-9 texts-color-black-1" href="#">Notificações:</a></li>
+          <li><a class="dropdown-item text-center text-muted texts-type-7" href="#">Nenhuma</a></li>
         </ul>
       </div>
       <div class="header_img"> <img src="../assets/avatar/<?= $userConfig[0]['image'] ? $userConfig[0]['image'] : 'no-user.svg' ?>" alt="user-img"> </div>

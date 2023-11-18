@@ -81,10 +81,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .user-notify > .dropdown-menu {
   right: -10rem !important;
+}
+
+.user-notify > .dropdown-menu > li:first-child > a {
+  cursor: default;
+}
+
+.user-notify > .dropdown-menu > li:first-child > a:hover {
+  background-color: transparent;
 }
 
 .user-notify > a {
