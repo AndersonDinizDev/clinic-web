@@ -16,7 +16,12 @@
     height: 245px;
   }
   .news-lessons > hr {
-    width: 85%;
+    width: 95%;
+  }
+  .news-lessons hr,
+  p,
+  h1 {
+    margin-left: 0.50rem;
   }
   .table > thead > tr > th {
     font-size: 12px;
