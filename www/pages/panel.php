@@ -69,7 +69,7 @@ $userConfig = getUserInfo($database, $userId);
         <p class="texts-type-16"><?= $userConfig[0]['level'] == 0 ? 'Usuário' : 'Admin' ?></p>
       </div>
       <div class="dropdown">
-        <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a style="color: #4723d9;" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#">Opções do Perfil</a></li>
