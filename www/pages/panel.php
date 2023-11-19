@@ -1,15 +1,11 @@
 <?php
 session_start();
 
-if ($_COOKIE['user-id']) {
-  $_COOKIE['user-id'] = $_SESSION['user-id'];
-
-  $userId = $_SESSION['user-id'];
-}
-
 if (!$_SESSION['user-id']) {
   header("Location: /");
 }
+
+$userId = $_SESSION['user-id'];
 
 require_once(__DIR__ . '/../config/config.php');
 

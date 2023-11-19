@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
               .then((response) => response.json())
               .then((data) => {
-                var tableHTML =
+                let tableHTML =
                   "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
                 tableHTML += "<thead>";
                 tableHTML += "<tr>";
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
               .then((response) => response.json())
               .then((data) => {
-                var tableUsersHTML =
+                let tableUsersHTML =
                   "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
                 tableUsersHTML += "<thead>";
                 tableUsersHTML += "<tr>";
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
             })
               .then((response) => response.json())
               .then((data) => {
-                var tableUpdatesHTML =
+                let tableUpdatesHTML =
                   "<table style='cursor: pointer;' class='table table-hover table-striped custom-table'>";
 
                 tableUpdatesHTML += "<thead>";

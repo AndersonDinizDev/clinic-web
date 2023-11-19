@@ -23,8 +23,6 @@ if ($data) {
     $_SESSION['user-email'] = $row['email'];
     $_SESSION['user-level'] = $row['level'];
     $_SESSION['user-image'] = $row['image'];
-    $exp = time() + 60 * 60 * 24 * 30;
-    setcookie('user-id', $row['id'], $exp);
     $check++;
   }
 
