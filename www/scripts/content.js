@@ -16,6 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#loading").fadeOut(1000);
   }
 
+  function dateFormat(date) {
+    let data = new Date(date);
+
+    let day = data.getDate();
+    let month = data.getMonth() + 1;
+    let year = data.getFullYear();
+    let hours = data.getHours();
+    let minutes = data.getMinutes();
+
+    day = day < 10 ? "0" + day : day;
+    month = month < 10 ? "0" + month : month;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    let dateformated =
+      day + "/" + month + "/" + year + " às " + hours + ":" + minutes;
+
+    return dateformated;
+  }
+
   function loadContent(contentName) {
     showLoading();
 
@@ -58,11 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHTML += "<tbody>";
 
                 data.forEach((lessons) => {
-
                   tableHTML += "<tr>";
                   tableHTML += "<td>" + lessons.category + "</td>";
                   tableHTML += "<td>" + lessons.text + "</td>";
-                  tableHTML += "<td>" + lessons.creation + "</td>";
+                  tableHTML += "<td>" + dateFormat(lessons.creation) + "</td>";
                   tableHTML += "</tr>";
                 });
 
@@ -99,8 +118,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 data.forEach((users) => {
                   tableUsersHTML += "<tr>";
-                  tableUsersHTML += "<td class='texts-type-7'>" + users.name + "</td>";
-                  tableUsersHTML += "<td class='texts-type-7'>" + users.creation + "</td>";
+                  tableUsersHTML +=
+                    "<td class='texts-type-7'>" + users.name + "</td>";
+                  tableUsersHTML +=
+                    "<td class='texts-type-7'>" + dateFormat(users.creation) + "</td>";
                   tableUsersHTML += "</tr>";
                 });
 
@@ -138,8 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 data.forEach((updates) => {
                   tableUpdatesHTML += "<tr>";
-                  tableUpdatesHTML += "<td class='texts-type-7'>" + updates.newupdate;
-                  tableUpdatesHTML += "<td class='texts-type-7'>" + updates.creation;
+                  tableUpdatesHTML +=
+                    "<td class='texts-type-7'>" + updates.newupdate;
+                  tableUpdatesHTML +=
+                    "<td class='texts-type-7'>" + dateFormat(updates.creation);
                   tableUpdatesHTML += "</tr>";
 
                   newUpdateTable.innerHTML = tableUpdatesHTML;
