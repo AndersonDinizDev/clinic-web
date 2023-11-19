@@ -42,12 +42,21 @@
   <hr style="height: 1px; border: 0; border-top: 1px solid #808080; margin-top: 1rem;" />
 </div>
 <div class="news w-100 d-flex justify-content-around p-3 gap-3">
-  <div id="news-lessons-table">
+  <div>
+    <h5 class="texts-type-12"><box-icon type='solid' name='info-square'></box-icon>Novas aulas:</h5>
+    <div id="news-lessons-table">
+    </div>
   </div>
   <div class="d-flex flex-column gap-3">
-    <div id="news-users-table">
+    <div>
+      <h5 class="texts-type-12"><box-icon type='solid' name='info-square'></box-icon>Novos usuários:</h5>
+      <div id="news-users-table">
+      </div>
     </div>
-    <div id="news-updates-table">
+    <div>
+      <h5 class="texts-type-12"><box-icon type='solid' name='info-square'></box-icon>Atualizações da plataforma:</h5>
+      <div id="news-updates-table">
+      </div>
     </div>
   </div>
 </div>

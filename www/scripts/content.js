@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHTML += "<thead>";
                 tableHTML += "<tr>";
                 tableHTML +=
-                  "<th class='texts-type-12' style='border-top-left-radius: 8px;'># Categoria</th>";
-                tableHTML += "<th class='texts-type-12'># Conteúdo</th>";
+                  "<th class='texts-type-9' style='border-top-left-radius: 8px;'># Categoria</th>";
+                tableHTML += "<th class='texts-type-9'># Conteúdo</th>";
                 tableHTML +=
-                  "<th class='texts-type-12' style='border-top-right-radius: 8px;'># Adicionado em</th>";
+                  "<th class='texts-type-9' style='border-top-right-radius: 8px;'># Adicionado em</th>";
                 tableHTML += "</tr>";
                 tableHTML += "</thead>";
                 tableHTML += "<tbody>";
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableUsersHTML += "<thead>";
                 tableUsersHTML += "<tr>";
                 tableUsersHTML +=
-                  "<th class='texts-type-12' style='border-top-left-radius: 8px;'># Nome</th>";
+                  "<th class='texts-type-9' style='border-top-left-radius: 8px;'># Nome</th>";
                 tableUsersHTML +=
-                  "<th class='texts-type-12' style='border-top-right-radius: 8px;'># Entrou em</th>";
+                  "<th class='texts-type-9' style='border-top-right-radius: 8px;'># Entrou em</th>";
                 tableUsersHTML += "</tr>";
                 tableUsersHTML += "</thead>";
                 tableUsersHTML += "<tbody>";
@@ -129,9 +129,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableUpdatesHTML += "<thead>";
                 tableUpdatesHTML += "<tr>";
                 tableUpdatesHTML +=
-                  "<th class='texts-type-12' style='border-top-left-radius: 8px'># Atualização</th>";
+                  "<th class='texts-type-9' style='border-top-left-radius: 8px'># Atualização</th>";
                 tableUpdatesHTML +=
-                  "<th class='texts-type-12' style='border-top-right-radius: 8px'># Adicionado em</th>";
+                  "<th class='texts-type-9' style='border-top-right-radius: 8px'># Adicionado em</th>";
                 tableUpdatesHTML += "</tr>";
                 tableUpdatesHTML += "</thead>";
                 tableUpdatesHTML += "<tbody>";
