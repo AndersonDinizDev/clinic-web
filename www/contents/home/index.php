@@ -6,21 +6,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../../assets/carrousel/frame-1.png" class="d-block w-100" alt="teste-img">
+      <img src="../../assets/carrousel/frame-1.png" class="img-fluid w-100" alt="teste-img">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="texts-color-black-1">Explorando o Mundo da Codificação</h5>
         <p class="texts-color-black-1">Desenvolva suas habilidades de programação e mergulhe no fascinante universo do código.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../../assets/carrousel/frame-1.png" class="d-block w-100" alt="teste-img">
+      <img src="../../assets/carrousel/frame-1.png" class="img-fluid w-100" alt="teste-img">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="texts-color-black-1">Construindo Futuros Digitais</h5>
         <p class="texts-color-black-1">Transforme linhas de código em inovações. Crie o futuro com a arte da programação.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../../assets/carrousel/frame-1.png" class="d-block w-100" alt="teste-img">
+      <img src="../../assets/carrousel/frame-1.png" class="img-fluid w-100" alt="teste-img">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="texts-color-black-1">Desvendando Desafios de Código</h5>
         <p class="texts-color-black-1">Enfrente desafios complexos de programação e aprimore suas habilidades para alcançar novas alturas.</p>
