@@ -5,6 +5,8 @@ if ($_SESSION['user-id']) {
 }
 
 require_once(__DIR__ . '/../config/config.php');
+
+$siteConfig = getSiteConfig($database);
 ?>
 <html lang="pt-br">
 
@@ -24,7 +26,7 @@ require_once(__DIR__ . '/../config/config.php');
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title><?php echo $response[0]['sitename'] ?> - Cadastro</title>
+  <title><?php echo $siteConfig[0]['sitename'] ?> - Cadastro</title>
 </head>
 
 <body class="register">
@@ -90,7 +92,7 @@ require_once(__DIR__ . '/../config/config.php');
           </div>
         </div>
         <footer class="login-footer mt-3">
-          <p class="texts-type-4 texts-color-gray">© <?php echo $response[0]['sitename'] ?> <?= date("Y") ?></p>
+          <p class="texts-type-4 texts-color-gray">© <?php echo $siteConfig[0]['sitename'] ?> <?= date("Y") ?></p>
         </footer>
       </div>
     </div>
